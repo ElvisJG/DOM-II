@@ -16,10 +16,12 @@ console.log(funBusH1);
 // 3
 funBusH1.addEventListener('click', event => {
   funBusH1.innerHTML = 'Yikes';
+  event.stopPropagation();
 });
 // 4
 funBusH1.addEventListener('dblclick', event => {
   funBusH1.innerHTML = 'Fun Bus';
+  event.stopPropagation();
 });
 
 let boat = document.querySelector('.boat');
