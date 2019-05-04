@@ -48,13 +48,13 @@ console.log(button2);
 console.log(button3);
 
 // 8
-button1.addEventListener('focus', event => {
+button1.addEventListener('mouseover', event => {
   button1.innerHTML = 'Hi 👋🏽';
 });
-button2.addEventListener('focus', event => {
+button2.addEventListener('mouseover', event => {
   button2.innerHTML = 'There 👉🏽';
 });
-button3.addEventListener('focus', event => {
+button3.addEventListener('mouseover', event => {
   button3.innerHTML = 'Cowboy 🤠';
 });
 
@@ -64,3 +64,14 @@ let onLoadAlert = alert('Sign up for ours Newsletter!');
 window.addEventListener('load', event => {
   onLoadAlert;
 });
+
+// Prevent Default
+
+let navThing = document.querySelectorAll('.nav-link');
+console.log(navThing);
+
+for (let i = 0; i < navThing.length; i++) {
+  navThing[i].addEventListener('click', event => {
+    event.preventDefault();
+  });
+}
