@@ -58,6 +58,14 @@ button3.addEventListener('mouseover', event => {
   button3.innerHTML = 'Cowboy 🤠';
 });
 
+// 9
+let content = document.querySelector('.content-section');
+console.log(content);
+
+content.addEventListener('wheel', event => {
+  content.style.backgroundColor = '#FFEBCD';
+});
+
 // 10
 let onLoadAlert = alert('Sign up for ours Newsletter!');
 
